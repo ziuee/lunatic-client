@@ -3,6 +3,8 @@ package net.minecraft.client.multiplayer;
 import com.google.common.collect.Lists;
 import java.io.File;
 import java.util.List;
+
+import net.lunatic.client.management.featuredserver.ServerDataFeatured;
 import net.minecraft.client.Minecraft;
 import net.minecraft.nbt.CompressedStreamTools;
 import net.minecraft.nbt.NBTTagCompound;
@@ -33,6 +35,7 @@ public class ServerList
         try
         {
             this.servers.clear();
+            loadFeaturedServers();
             NBTTagCompound nbttagcompound = CompressedStreamTools.read(new File(this.mc.mcDataDir, "servers.dat"));
 
             if (nbttagcompound == null)
@@ -52,6 +55,20 @@ public class ServerList
             logger.error((String)"Couldn\'t load server list", (Throwable)exception);
         }
     }
+    
+    private void loadFeaturedServers() {
+    	this.addServerData(new ServerDataFeatured("Lunatic", "lunatic.net"));
+    }
+    
+    public int getFeaturedServerCount() {
+    	int count = 0;
+    	for(ServerData sd : this.servers) {
+    		if(sd instanceof ServerDataFeatured) {
+    			count++;
+    		}
+    	}
+    	return count;
+    }
 
     /**
      * Runs getNBTCompound on each ServerData instance, puts everything into a "servers" NBT list and writes it to
@@ -65,7 +82,9 @@ public class ServerList
 
             for (ServerData serverdata : this.servers)
             {
-                nbttaglist.appendTag(serverdata.getNBTCompound());
+            	if(!(serverdata instanceof ServerDataFeatured)) {
+            		nbttaglist.appendTag(serverdata.getNBTCompound());
+            	}
             }
 
             NBTTagCompound nbttagcompound = new NBTTagCompound();

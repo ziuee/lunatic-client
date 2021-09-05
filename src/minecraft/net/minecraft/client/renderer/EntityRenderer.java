@@ -21,6 +21,7 @@ import org.lwjgl.util.glu.Project;
 import com.google.common.base.Predicates;
 import com.google.gson.JsonSyntaxException;
 
+import net.lunatic.client.management.event.impl.RenderEvent;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBed;
 import net.minecraft.block.material.Material;
@@ -1415,6 +1416,8 @@ public class EntityRenderer implements IResourceManagerReloadListener
                 }
             }
         }
+        
+        new RenderEvent().call();
 
         this.frameFinish();
         this.waitForServerThread();

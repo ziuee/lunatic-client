@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.lwjgl.opengl.Display"/>
+    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+    <fullyQualifiedTypeName name="com.ibm.icu.impl.duration.impl.ResourceBasedPeriodFormatterDataService"/>
+    <fullyQualifiedTypeName name="net.minecraft.client.multiplayer.ServerData"/>
+    <fullyQualifiedTypeName name="net.lunatic.client.management.featuredserver.ServerDataFeatured"/>
+    <fullyQualifiedTypeName name="net.arikia.dev.drpc.DiscordEventHandlers"/>
+    <fullyQualifiedTypeName name="net.arikia.dev.drpc.DiscordEventHandlers.Builder"/>
+    <fullyQualifiedTypeName name="net.arikia.dev.drpc.callbacks.ReadyCallback"/>
+    <fullyQualifiedTypeName name="net.arikia.dev.drpc.DiscordRPC"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="net.arikia.dev.drpc.DiscordRichPresence"/>
+    <fullyQualifiedTypeName name="net.arikia.dev.drpc.DiscordRichPresence.Builder"/>
+    <fullyQualifiedTypeName name="net.lunatic.client.management.discord.DiscordRP"/>
+    <fullyQualifiedTypeName name="net.minecraft.client.gui.GuiButton"/>
+    <fullyQualifiedTypeName name="net.lunatic.client.management.gui.menus.LunaticMainMenu"/>
+    <fullyQualifiedTypeName name="net.minecraft.client.resources.I18n"/>
+    <fullyQualifiedTypeName name="net.lunatic.client.management.gui.menus.utils.GuiMenuButton"/>
+    <fullyQualifiedTypeName name="net.minecraft.util.ResourceLocation"/>
+    <fullyQualifiedTypeName name="net.minecraft.client.gui.ScaledResolution"/>
+    <fullyQualifiedTypeName name="net.minecraft.client.renderer.GlStateManager"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="net.minecraft.client.Minecraft"/>
+    <fullyQualifiedTypeName name="net.lunatic.client.management.event.Event"/>
+    <fullyQualifiedTypeName name="net.lunatic.client.management.module.ModuleManager"/>
+    <fullyQualifiedTypeName name="net.lunatic.client.management.event.EventManager"/>
+    <fullyQualifiedTypeName name="net.lunatic.client.management.event.impl.RenderEvent"/>
+    <fullyQualifiedTypeName name="net.lunatic.client.Lunatic"/>
+    <fullyQualifiedTypeName name="org.apache.commons.lang3.ArrayUtils"/>
+    <fullyQualifiedTypeName name="net.minecraft.client.settings.KeyBinding"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<item key="selection" value="Minecraft.getMinecraft().fontRendererObj"/>
+		<list key="findhistory">
+			<item value="font"/>
+			<item value="viewportTexture"/>
+			<item value="backgroundTexture"/>
+			<item value="drawPan"/>
+			<item value="drawPanorama"/>
+			<item value="titlePanoramaPaths"/>
+			<item value="initGui"/>
+			<item value="mousePressed"/>
+		</list>
+		<list key="replacehistory">
+			<item value="Minecraft.getMinecraft().fontRendererObj"/>
+		</list>
+	</section>
+</section>

@@ -1,0 +1,5 @@
+package net.lunatic.client.management.gui.menus.utils;
+
+public class GuiMenuButton {
+
+}

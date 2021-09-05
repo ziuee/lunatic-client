@@ -1,0 +1,5 @@
+package net.lunatic.client.management.gui.menus;
+
+public class LunaticMainMenu {
+
+}

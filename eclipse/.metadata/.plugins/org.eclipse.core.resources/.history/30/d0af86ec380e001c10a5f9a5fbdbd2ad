@@ -1,0 +1,28 @@
+package net.lunatic.client;
+
+import org.lwjgl.opengl.Display;
+
+public class Lunatic {
+	
+	/*
+	 * Boolean = false / true
+	 * String = text
+	 * Double = number that allows to have double integers
+	 * Int = number without , dont do > (1.2), instead 1 cus int
+	 */
+	
+	public static Lunatic INSTANCE = new Lunatic();
+	
+	public String lunaticName = "Lunatic";
+	public String version = "1.0.0";
+	public String build = "1";
+	
+	public void loadLunatic() {
+		Display.setTitle(lunaticName + " | " + version);
+	}
+	
+	public void unloadLunatic() {
+		
+	}
+
+}

@@ -4,6 +4,8 @@ import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 import java.io.IOException;
 import java.util.List;
+
+import net.lunatic.client.management.featuredserver.ServerDataFeatured;
 import net.minecraft.client.multiplayer.GuiConnecting;
 import net.minecraft.client.multiplayer.ServerData;
 import net.minecraft.client.multiplayer.ServerList;
@@ -416,6 +418,10 @@ public class GuiMultiplayer extends GuiScreen implements GuiYesNoCallback
                 this.btnEditServer.enabled = true;
                 this.btnDeleteServer.enabled = true;
             }
+            if(savedServerList.getServerData(index) instanceof ServerDataFeatured) {
+            	this.btnEditServer.enabled = false;
+                this.btnDeleteServer.enabled = false;
+            }
         }
     }
 
@@ -454,7 +460,7 @@ public class GuiMultiplayer extends GuiScreen implements GuiYesNoCallback
 
     public boolean func_175392_a(ServerListEntryNormal p_175392_1_, int p_175392_2_)
     {
-        return p_175392_2_ > 0;
+        return p_175392_2_ > this.savedServerList.getFeaturedServerCount();
     }
 
     public boolean func_175394_b(ServerListEntryNormal p_175394_1_, int p_175394_2_)
