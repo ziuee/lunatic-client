@@ -91,7 +91,7 @@ public class BlockChest extends BlockContainer
     {
         this.checkForSurroundingChests(worldIn, pos, state);
 
-        for (EnumFacing enumfacing : EnumFacing.Plane.HORIZONTAL)
+        for (EnumFacing enumfacing : EnumFacing.Plane.HORIZONTAL.facings())
         {
             BlockPos blockpos = pos.offset(enumfacing);
             IBlockState iblockstate = worldIn.getBlockState(blockpos);
@@ -278,7 +278,7 @@ public class BlockChest extends BlockContainer
     {
         EnumFacing enumfacing = null;
 
-        for (EnumFacing enumfacing1 : EnumFacing.Plane.HORIZONTAL)
+        for (EnumFacing enumfacing1 : EnumFacing.Plane.HORIZONTAL.facings())
         {
             IBlockState iblockstate = worldIn.getBlockState(pos.offset(enumfacing1));
 
@@ -385,7 +385,7 @@ public class BlockChest extends BlockContainer
         }
         else
         {
-            for (EnumFacing enumfacing : EnumFacing.Plane.HORIZONTAL)
+            for (EnumFacing enumfacing : EnumFacing.Plane.HORIZONTAL.facings())
             {
                 if (worldIn.getBlockState(pos.offset(enumfacing)).getBlock() == this)
                 {
@@ -470,7 +470,7 @@ public class BlockChest extends BlockContainer
             }
             else
             {
-                for (EnumFacing enumfacing : EnumFacing.Plane.HORIZONTAL)
+                for (EnumFacing enumfacing : EnumFacing.Plane.HORIZONTAL.facings())
                 {
                     BlockPos blockpos = pos.offset(enumfacing);
                     Block block = worldIn.getBlockState(blockpos).getBlock();

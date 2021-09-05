@@ -3765,7 +3765,7 @@ public abstract class World implements IBlockAccess
 
     public void updateComparatorOutputLevel(BlockPos pos, Block blockIn)
     {
-        for (EnumFacing enumfacing : EnumFacing.Plane.HORIZONTAL)
+        for (EnumFacing enumfacing : EnumFacing.Plane.HORIZONTAL.facings())
         {
             BlockPos blockpos = pos.offset(enumfacing);
 

@@ -1,9 +1,11 @@
 package net.minecraft.client.renderer.texture;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.src.Config;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
+import shadersmod.client.ShadersTex;
 
 public class TextureCompass extends TextureAtlasSprite
 {
@@ -13,6 +15,7 @@ public class TextureCompass extends TextureAtlasSprite
     /** Speed and direction of compass rotation */
     public double angleDelta;
     public static String field_176608_l;
+    private static final String __OBFID = "CL_00001071";
 
     public TextureCompass(String iconName)
     {
@@ -91,7 +94,15 @@ public class TextureCompass extends TextureAtlasSprite
             if (i != this.frameCounter)
             {
                 this.frameCounter = i;
-                TextureUtil.uploadTextureMipmap((int[][])this.framesTextureData.get(this.frameCounter), this.width, this.height, this.originX, this.originY, false, false);
+
+                if (Config.isShaders())
+                {
+                    ShadersTex.uploadTexSub((int[][])((int[][])this.framesTextureData.get(this.frameCounter)), this.width, this.height, this.originX, this.originY, false, false);
+                }
+                else
+                {
+                    TextureUtil.uploadTextureMipmap((int[][])((int[][])this.framesTextureData.get(this.frameCounter)), this.width, this.height, this.originX, this.originY, false, false);
+                }
             }
         }
     }

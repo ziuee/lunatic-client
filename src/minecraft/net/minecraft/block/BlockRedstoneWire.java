@@ -131,7 +131,7 @@ public class BlockRedstoneWire extends Block
 
         int l = 0;
 
-        for (EnumFacing enumfacing : EnumFacing.Plane.HORIZONTAL)
+        for (EnumFacing enumfacing : EnumFacing.Plane.HORIZONTAL.facings())
         {
             BlockPos blockpos = pos1.offset(enumfacing);
             boolean flag = blockpos.getX() != pos2.getX() || blockpos.getZ() != pos2.getZ();
@@ -215,17 +215,17 @@ public class BlockRedstoneWire extends Block
         {
             this.updateSurroundingRedstone(worldIn, pos, state);
 
-            for (EnumFacing enumfacing : EnumFacing.Plane.VERTICAL)
+            for (EnumFacing enumfacing : EnumFacing.Plane.VERTICAL.facings())
             {
                 worldIn.notifyNeighborsOfStateChange(pos.offset(enumfacing), this);
             }
 
-            for (EnumFacing enumfacing1 : EnumFacing.Plane.HORIZONTAL)
+            for (EnumFacing enumfacing1 : EnumFacing.Plane.HORIZONTAL.facings())
             {
                 this.notifyWireNeighborsOfStateChange(worldIn, pos.offset(enumfacing1));
             }
 
-            for (EnumFacing enumfacing2 : EnumFacing.Plane.HORIZONTAL)
+            for (EnumFacing enumfacing2 : EnumFacing.Plane.HORIZONTAL.facings())
             {
                 BlockPos blockpos = pos.offset(enumfacing2);
 
@@ -254,12 +254,12 @@ public class BlockRedstoneWire extends Block
 
             this.updateSurroundingRedstone(worldIn, pos, state);
 
-            for (EnumFacing enumfacing1 : EnumFacing.Plane.HORIZONTAL)
+            for (EnumFacing enumfacing1 : EnumFacing.Plane.HORIZONTAL.facings())
             {
                 this.notifyWireNeighborsOfStateChange(worldIn, pos.offset(enumfacing1));
             }
 
-            for (EnumFacing enumfacing2 : EnumFacing.Plane.HORIZONTAL)
+            for (EnumFacing enumfacing2 : EnumFacing.Plane.HORIZONTAL.facings())
             {
                 BlockPos blockpos = pos.offset(enumfacing2);
 
@@ -342,7 +342,7 @@ public class BlockRedstoneWire extends Block
             {
                 EnumSet<EnumFacing> enumset = EnumSet.<EnumFacing>noneOf(EnumFacing.class);
 
-                for (EnumFacing enumfacing : EnumFacing.Plane.HORIZONTAL)
+                for (EnumFacing enumfacing : EnumFacing.Plane.HORIZONTAL.facings())
                 {
                     if (this.func_176339_d(worldIn, pos, enumfacing))
                     {

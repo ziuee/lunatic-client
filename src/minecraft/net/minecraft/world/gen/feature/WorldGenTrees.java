@@ -212,7 +212,7 @@ public class WorldGenTrees extends WorldGenAbstractTree
                         {
                             for (int l3 = 0; l3 < 2; ++l3)
                             {
-                                for (EnumFacing enumfacing : EnumFacing.Plane.HORIZONTAL)
+                                for (EnumFacing enumfacing : EnumFacing.Plane.HORIZONTAL.facings())
                                 {
                                     if (rand.nextInt(4 - l3) == 0)
                                     {

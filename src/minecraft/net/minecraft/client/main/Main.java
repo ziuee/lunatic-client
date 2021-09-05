@@ -19,7 +19,7 @@ import net.minecraft.util.Session;
 
 public class Main
 {
-    public static void main(String[] p_main_0_)
+    public static void main(String[] args)
     {
         System.setProperty("java.net.preferIPv4Stack", "true");
         OptionParser optionparser = new OptionParser();
@@ -47,7 +47,7 @@ public class Main
         OptionSpec<String> optionspec17 = optionparser.accepts("assetIndex").withRequiredArg();
         OptionSpec<String> optionspec18 = optionparser.accepts("userType").withRequiredArg().defaultsTo("legacy", new String[0]);
         OptionSpec<String> optionspec19 = optionparser.nonOptions();
-        OptionSet optionset = optionparser.parse(p_main_0_);
+        OptionSet optionset = optionparser.parse(args);
         List<String> list = optionset.valuesOf(optionspec19);
 
         if (!list.isEmpty())

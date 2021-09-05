@@ -49,7 +49,7 @@ public class BlockStem extends BlockBush implements IGrowable
     {
         state = state.withProperty(FACING, EnumFacing.UP);
 
-        for (EnumFacing enumfacing : EnumFacing.Plane.HORIZONTAL)
+        for (EnumFacing enumfacing : EnumFacing.Plane.HORIZONTAL.facings())
         {
             if (worldIn.getBlockState(pos.offset(enumfacing)).getBlock() == this.crop)
             {
@@ -88,7 +88,7 @@ public class BlockStem extends BlockBush implements IGrowable
                 }
                 else
                 {
-                    for (EnumFacing enumfacing : EnumFacing.Plane.HORIZONTAL)
+                    for (EnumFacing enumfacing : EnumFacing.Plane.HORIZONTAL.facings())
                     {
                         if (worldIn.getBlockState(pos.offset(enumfacing)).getBlock() == this.crop)
                         {

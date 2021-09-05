@@ -103,7 +103,8 @@ public class BlockCactus extends Block
 
     public boolean canBlockStay(World worldIn, BlockPos pos)
     {
-        for (EnumFacing enumfacing : EnumFacing.Plane.HORIZONTAL)
+    	//TODO: is this fucking correct lmao
+        for (EnumFacing enumfacing : EnumFacing.Plane.HORIZONTAL.facings())
         {
             if (worldIn.getBlockState(pos.offset(enumfacing)).getBlock().getMaterial().isSolid())
             {
